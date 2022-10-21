@@ -1,0 +1,17 @@
+.showcontent {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 134px);
+  gap: 10px;
+}
+
+.card {
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card > img {
+  width: 114px;
+  border-radius: 4px;
+}

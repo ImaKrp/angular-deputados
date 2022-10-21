@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ExibeDeputadosComponent } from './exibe-deputados/exibe-deputados.component';
+import { ExibePartidosComponent } from './exibe-partidos/exibe-partidos.component';
 
-const routes: Routes = [];
-
+const routes: Routes = [
+  { path: 'exibedeputados', component: ExibeDeputadosComponent },
+  { path: 'exibepartidos', component: ExibePartidosComponent },
+  { path: '', redirectTo: '/exibedeputados', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent },
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

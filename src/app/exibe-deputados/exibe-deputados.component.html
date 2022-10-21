@@ -1,0 +1,16 @@
+<input
+  id="search"
+  type="text"
+  placeholder="Busca por sigla do estado"
+  [formControl]="search"
+  (change)="onChange()"
+/>
+<div class="showcontent">
+  <div class="card" *ngFor="let dep of deputados">
+    <img [src]="dep.urlFoto" alt="" />
+    <h4>
+      {{ dep.nome }}
+    </h4>
+    <span> {{ dep.siglaPartido }} - {{ dep.siglaUf }} </span>
+  </div>
+</div>

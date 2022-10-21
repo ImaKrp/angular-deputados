@@ -1,0 +1,12 @@
+<input
+  id="search"
+  type="text"
+  placeholder="Busca por sigla"
+  [formControl]="search"
+  (change)="onChange()"
+/>
+<div class="showcontent">
+  <div class="card" *ngFor="let part of partidos">
+    <span> {{ part.nome }} - {{ part.sigla }} </span>
+  </div>
+</div>
